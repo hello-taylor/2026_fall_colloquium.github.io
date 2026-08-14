@@ -250,6 +250,16 @@
     border-top:1px solid rgba(42,79,75,.5);
   }
 
+
+  /* monogram stand-in when no headshot is available yet */
+  .avatar.monogram{
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:500;font-size:1.4rem;
+    letter-spacing:.02em;color:var(--moss);
+    background:var(--surface);
+    user-select:none;
+  }
+
   a{color:var(--gold);}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
@@ -265,6 +275,7 @@
     .panel-body{padding:18px 18px 20px;}
     .billing{gap:14px;}
     .feature-note{margin-bottom:16px;}
+    .avatar.monogram{font-size:1.1rem;}
     .detail{border-right:0;border-bottom:1px solid var(--line);width:100%;}
     .detail:last-child{border-bottom:0;}
   }
@@ -339,9 +350,17 @@
 
   <ol class="schedule" id="schedule">
 
-    <li class="entry open">
+    <li class="entry filled">
       <div class="mark"><span class="wk">Week 01</span><span class="date">Aug 25</span></div>
-      <div class="body-col"><span class="placeholder">Speaker to be announced</span></div>
+      <div class="body-col">
+        <div class="avatar monogram" aria-hidden="true">JK</div>
+        <div class="info">
+          <h2 class="speaker">Dr. Jack Kaye</h2>
+          <p class="affil">Former Associate Director for Research, Earth Science Division, NASA Science Mission Directorate</p>
+          <ul class="tags"><li class="tag">Atmospheric chemistry</li><li class="tag">Earth observation</li><li class="tag">Stratospheric ozone</li><li class="tag">Research leadership</li></ul>
+          <p class="pending">Abstract &amp; bio coming soon</p>
+        </div>
+      </div>
     </li>
 
     <li class="entry filled">
