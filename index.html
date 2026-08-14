@@ -87,7 +87,7 @@
   .detail dd{margin:0;font-weight:500;font-size:.98rem;}
 
   /* ── The rail ─────────────────────────────────────── */
-  .schedule{list-style:none;margin:0;padding:0 0 90px;position:relative;border-top:1px solid var(--line);}
+  .schedule{list-style:none;margin:0;padding:0;position:relative;border-top:1px solid var(--line);}
   .schedule::before{
     content:"";position:absolute;left:96px;top:0;bottom:0;
     width:1px;background:var(--rail);
@@ -252,6 +252,19 @@
 
 
   .speaker + .tags{margin-top:14px;}
+
+  /* ── Footer ────────────────────────────────────────── */
+  .foot{
+    border-top:1px solid var(--line);
+    padding:24px 0 64px;
+    display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;
+  }
+  .foot p{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--dim);margin:0;
+  }
+  .foot .stamp{color:#6E8F7E;}
+
   a{color:var(--gold);}
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
 
@@ -570,6 +583,11 @@
     </li>
 
   </ol>
+
+  <footer class="foot">
+    <p>Schedule subject to change</p>
+    <p class="stamp">Last updated <time datetime="2026-08-14">14 August 2026</time></p>
+  </footer>
 
 </main>
 
